@@ -2,10 +2,21 @@
 //
 
 #include <iostream>
+#include <regex>
+#include <string>
+#include <fstream>
+
+#include "lexer.h"
+
+
+bool IsTokenValid(std::string str) {
+    static const std::regex s_r(std::string("not|<(-|=|)|=(>|=|)|>|\\+|\\*|\\/|-(>|)|\\.|\\~"));
+    return std::regex_match(str.data(), s_r);
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << IsTokenValid("=>");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

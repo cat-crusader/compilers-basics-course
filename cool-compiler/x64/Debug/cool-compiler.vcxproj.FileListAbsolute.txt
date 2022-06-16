@@ -1,1 +1,0 @@
-D:\git\compilers-basics-course\cool-compiler\x64\Debug\cool-compiler.exe
